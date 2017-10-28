@@ -1,0 +1,13 @@
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\bin\globons-app.dll.config
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\bin\globons-app.dll
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\bin\globons-app.pdb
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\bin\EntityFramework.dll
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\bin\EntityFramework.SqlServer.dll
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\bin\EntityFramework.xml
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\bin\EntityFramework.SqlServer.xml
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\obj\Debug\globons-app.csprojResolveAssemblyReference.cache
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\obj\Debug\globons-app.csproj.CoreCompileInputs.cache
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\obj\Debug\globons-app.dll
+C:\Users\Danielita\source\repos\globons-app\punto1\globons-app\obj\Debug\globons-app.pdb
