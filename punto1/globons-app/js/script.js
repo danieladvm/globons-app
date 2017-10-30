@@ -5,7 +5,7 @@
 
         $("#fecha-nac").datepicker({
             maxDate: 0,
-            dateFormat: "dd/mm/yy",
+            dateFormat: "d M, y",
             changeMonth: true,
             changeYear: true
         });
@@ -14,9 +14,13 @@
 
         $("#enviar-persona").click(function (e) {
             e.preventDefault();
-            SetPersona();
-            GetPersonas();
-            $('#myModal').modal('hide');
+            $('#form-persona').validator('validate');
+            if (!$(this).hasClass("disabled")) {
+                if (SetPersona()) {
+                    GetPersonas();
+                    $('#myModal').modal('hide');
+                }
+            }
         });
 
         $("#listado-personas").on("click", ".editar-persona", function (e) {
@@ -88,9 +92,11 @@ function GetPersona(idPersona) {
             $("#nombre").val(persona.nombre);
             $("#apellido").val(persona.apellido);
             $("#nro-doc").val(persona.numeroDocumento);
-            $("#fecha-nac").val(persona.fechaNacimiento);
+            //$("#fecha-nac").val(persona.fechaNacimiento);
             $("#calle").val(persona.Direccion.calle);
             $("#numero").val(persona.Direccion.numero);
+
+            $("#fecha-nac").val($.datepicker.formatDate('d M, y', new Date(persona.fechaNacimiento)));
         }
     }).fail(function (xhr, status, error) {
         alert("Hubo un error");
@@ -98,6 +104,7 @@ function GetPersona(idPersona) {
 }
 
 function SetPersona() {
+    var res;
     var persona = new Object();
     var direccion = new Object();
     var idPersona = $("#enviar-persona").data("id") == undefined ? 0 : $("#enviar-persona").data("id");
@@ -121,12 +128,19 @@ function SetPersona() {
         contentType: "application/json; charset=utf-8",
         dataType: "json"
     }).done(function (response) {
-        if (response.d != null) {
-
+        if (response.d == "") {
+            res = true;
+        }
+        else {
+            alert(response.d);
+            res = false;
         }
     }).fail(function (xhr, status, error) {
         alert("Hubo un error");
+        res = false;
     });
+
+    return res;
 }
 
 function DeletePersona(idPersona) {

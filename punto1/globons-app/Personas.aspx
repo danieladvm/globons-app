@@ -35,7 +35,7 @@
                         <div class="form-group">
                             <label for="nro-doc" class="col-sm-3 control-label">Número documento</label>
                             <div class="col-sm-9">
-                                <input id="nro-doc" class="form-control" type="number" name="name" placeholder="Número documento" data-error="Debe ingresar el número de documento" required />
+                                <input id="nro-doc" class="form-control" type="number" min="0" name="name" placeholder="Número documento" data-error="Debe ingresar el número de documento" required />
                             </div>
                         </div>
                         <div class="form-group">
@@ -48,7 +48,7 @@
                             <label for="direccion" class="col-sm-3 control-label">Dirección</label>
                             <div id="direccion" class="col-sm-9">
                                 <input id="calle" class="form-control" type="text" name="name" placeholder="Calle" data-error="Debe ingresar una calle" required />
-                                <input id="numero" class="form-control" type="number" name="name" placeholder="Número" data-error="Debe ingresar un número" required />
+                                <input id="numero" class="form-control" type="number" min="0" name="name" placeholder="Número" data-error="Debe ingresar un número" required />
                             </div>
                         </div>
                     </div>
